@@ -1,0 +1,27 @@
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100%; background: #0a0a0a; overflow-x: hidden; }
+    body {
+      font-family: 'Inter', sans-serif;
+      color: #f0f0f0;
+      -webkit-tap-highlight-color: transparent;
+      -webkit-user-select: none;
+      user-select: none;
+    }
+    input { -webkit-user-select: text; user-select: text; }
+    #root { min-height: 100vh; min-height: 100dvh; }
+    input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; }
+    input[type=number] { -moz-appearance: textfield; }
+    .safe-wrap {
+      padding: max(env(safe-area-inset-top), 24px) 16px 48px;
+      max-width: 520px;
+      margin: 0 auto;
+    }
+    @keyframes pulse {
+      0% { opacity: 1; }
+      50% { opacity: 0.6; }
+      100% { opacity: 1; }
+    }
+    .timer-pulse {
+      animation: pulse 1.5s infinite;
+    }
